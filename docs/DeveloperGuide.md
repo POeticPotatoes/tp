@@ -12,8 +12,34 @@
 --------------------------------------------------------------------------------------------------------------------
 
 ## **Acknowledgements**
+This project was **forked** from [se-edu/addressbook-level3](https://github.com/se-edu/addressbook-level3) under the **MIT License**. It extends the original work with additional features and functionalities inspired by CRM-style client and booking management systems.
 
-_{ list here sources of all reused/adapted ideas, code, documentation, and third-party libraries -- include links to the original source as well }_
+### Third-Party Libraries
+- **JavaFX** — used for the graphical user interface.  
+  [https://openjfx.io](https://openjfx.io)
+- **Jackson** — used to serialize and deserialize JSON data
+  [https://github.com/FasterXML/jackson](https://github.com/FasterXML/jackson)
+- **JUnit 5** — used to perform unit and integration testing.  
+  [https://junit.org/junit5](https://junit.org/junit5)
+
+### Development Tools
+- **Gradle** — for build automation and dependency management.  
+  [https://gradle.org](https://gradle.org)
+- **GitHub Pages** — for project documentation hosting.  
+  [https://pages.github.com](https://pages.github.com)
+- **PlantUML** — for generated UML diagrams used in documentation.  
+  [https://plantuml.com](https://plantuml.com)
+- **MarkBind** — for formatting and publishing the user and developer guides.  
+  [https://markbind.org](https://markbind.org)
+- **GitHub Actions (CI)** — for continuous integration/ continuous deployment (CI/CD) and automated build testing.  
+  [https://github.com/features/actions](https://github.com/features/actions)
+
+### AI Assistance
+- **ChatGPT (OpenAI)** — assisted with conceptual explanations and documentation organization.  
+  [https://chat.openai.com](https://chat.openai.com)
+- **GitHub Copilot** — provided inline code suggestions and boilerplate generation.  
+  [https://github.com/features/copilot](https://github.com/features/copilot)\
+
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -181,7 +207,7 @@ These validations ensure that only well-formed, valid commands are executed agai
 The following design considerations were maintained during implementation:
 
 Command formats should be **simple and short**:
-* This reflects our [non-functional](#non-functional-requirements) requirement that a non-technical user must be able to learn how to operate the app quickly.
+* This reflects our [non-functional](#non-functional-requirements) requirement that a non-technical user must be able to learn how to operate the app.
 * We split up our various search commands to simplify the work of remembering various abstract prefixes.
 * For the add command which was inevitably long, we provided command completion with <kbd>Tab</kbd> to circumvent the issue.
 
@@ -372,7 +398,7 @@ The following sequence diagram shows how an undo operation goes through the `Log
 
 <box type="info" seamless>
 
-**Note:** The lifeline for `UndoCommand` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+**Note:** The lifeline for `UndoCommand` and `AddressBookParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 
 </box>
 
@@ -494,6 +520,8 @@ Each skipped row produces a corresponding warning in the log:
 6. `Storage#saveAddressBook()` persists the updated state.
 
 <puml src="diagrams/ImportExcelDetailedSequence.puml" width="750" />  
+
+**Note:** The lifeline for `ExcelReader` and `ExcelParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline continues till the end of diagram.
 
 #### Design considerations
 
@@ -810,6 +838,8 @@ Main Success Scenario (MSS):
 12. **Internet Independence**
 - The application must be able to be used without an internet connection. Command summary must be provided in the application so 
   that users will not have to refer to online documentation for regular use.
+13. **Operation Speed**
+- For a user of average typing speed and mouse control, they must be able to operate the application faster than a traditional mouse-based GUI
 
 ### Glossary
 

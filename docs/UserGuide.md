@@ -76,7 +76,7 @@ add n/Alice Pauline p/94351253 e/alice@example.com a/123, Jurong West Ave 6, #08
 
 <box type="info" seamless>
 <markdown>
-If you want to **quickly fill in the format of the `add` command**, you can press the `tab` key after typing `add` to make use of our **autofill** feature.
+If you want to **quickly fill in the format of the `add` command**, you can press the <kbd>tab</kbd> key after typing `add` to make use of our **autofill** feature.
 
 If you wish to see a **brief explanation** of any command, simply click on the Help tab and click `Help F1` or simply press <kbd>F1</kbd>.
 </markdown>
