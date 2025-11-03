@@ -36,6 +36,7 @@ If you wish to navigate this page quickly, feel free to use the **table of conte
 
 ## Quick start
 
+### Step 1: Install Java
 1. Ensure you have Java `17` or above installed in your Computer. It can be downloaded [here](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).<br>
    <box type="info" seamless>
    <markdown>
@@ -44,15 +45,29 @@ If you wish to navigate this page quickly, feel free to use the **table of conte
    </markdown>
    </box>
 
-2. Download the latest version of `organ-izer.jar` from [here](https://github.com/AY2526S1-CS2103T-T17-3/tp/releases).
+### Step 2: Download Organ-izer
+1. Download the latest version of `organ-izer.jar` from [here](https://github.com/AY2526S1-CS2103T-T17-3/tp/releases).
 
-3. Make a folder and place `organ-izer.jar` into it.
+2. Make a folder and place `organ-izer.jar` into it.
 
-4. Open a command terminal.
+### Step 3: Run Organ-izer
+**Easy way (with mouse):**
+- Simply double-click `organ-izer.jar`
+- If it asks which application to open **Organ-izer** with, select Java
+- If this doesn't work, try the command-line method below
 
-5. Navigate to the file using cd.
-
-6. Enter `java -jar organ-izer.jar` command to run the application. <br>
+**Command-line method:**
+1. Open a command terminal:
+   - **Windows:** Launch "Command Prompt" or "PowerShell" from the Start menu
+   - **Mac:** Search for "Terminal" in Spotlight (<kbd>Cmd</kbd> + <kbd>Space</kbd>)
+2. Navigate to the folder with `cd`: 
+   - Type `cd ` with a space after, but do not press <kbd>Enter</kbd> yet
+   - Drag and drop your **Organ-izer** folder into the terminal window
+   - Press <kbd>Enter</kbd>  
+   <box type="info" seamless>
+     If you are familiar with the command line, you may simply navigate to the folder.
+   </box>
+3. Run **Organ-izer** by typing `java -jar organ-izer.jar` into the terminal and pressing <kbd>Enter</kbd>. <br>
 
 
 A screen similar to the one below should be visible after a few seconds. Note that the app contains some sample data.<br><br>

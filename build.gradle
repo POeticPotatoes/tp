@@ -67,7 +67,7 @@ dependencies {
 }
 
 shadowJar {
-    archiveFileName = 'Organ-izer.jar'
+    archiveFileName = 'organ-izer.jar'
 }
 
 defaultTasks 'clean', 'test'
